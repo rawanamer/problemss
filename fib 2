@@ -1,0 +1,14 @@
+class Solution():
+    def fib(self, n):
+        first = 0
+        second = 1
+        for i in range(n+1):
+            if i == 0:
+                next = 0
+            elif i == 1:
+                next = 1
+            else:
+                next = first + second
+                first = second
+                second = next
+        return next
